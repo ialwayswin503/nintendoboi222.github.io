@@ -36,6 +36,7 @@
     body {
         background-color: var(--background-color);
         color: var(--text-color);
+        font-family: 'Oxanium', sans-serif;
     }
 
     .game-link {
@@ -101,6 +102,10 @@
 
     .slider.round:before {
         border-radius: 50%;
+    }
+
+    .center-content {
+        text-align: center;
     }
   </style>
 
@@ -554,7 +559,7 @@
 </div>
 
     <br>
-    <center>
+    <div class="center-content">
         <footer>
             <a href="https://nintendoboi222.github.io/licence-stuff/contact" target="_blank">Contact</a>
             <a href="https://github.com/Nintendoboi22" id="main-github-link" target="_blank">Main Github</a>
@@ -566,7 +571,7 @@
             <a href="https://Nintendoboi222.github.io/games/credits" target="_blank">Credits</a>
             <a href="https://Nintendoboi222.github.io/games/Statuses" target="_blank">Game Statuses</a>
         </footer>
-    </center>
+    </div>
 
     <script>
         const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
