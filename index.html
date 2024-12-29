@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <link rel="stylesheet" href="/css/style.css">
@@ -18,10 +18,19 @@
         --secondary-color: #333333;
         --background-color: #f4f4f4;
         --text-color: #222222;
-        --button-bg: #4a4a4a;
-        --button-hover: #666666;
-        --button-text-color: #ffffff;
-        --button-border-color: #222222;
+        --link-color: #0066cc;
+        --game-link-bg: #4a4a4a;
+        --game-link-hover: #666666;
+    }
+
+    [data-theme="dark"] {
+        --primary-color: #674bc3;
+        --secondary-color: #ffffff;
+        --background-color: #222222;
+        --text-color: #8f0fd4;
+        --link-color: #66b3ff;
+        --game-link-bg: #2a2a2a;
+        --game-link-hover: #4a4a4a;
     }
 
     body {
@@ -31,52 +40,79 @@
     }
 
     .game-link {
-        background-color: var(--button-bg);
-        color: var(--button-text-color);
-        border: 1px solid var(--button-border-color);
-        padding: 10px;
-        display: inline-block;
-        text-decoration: none;
-        transition: background-color 0.3s, color 0.3s;
+        background-color: var(--game-link-bg);
+        color: var(--primary-color);
     }
 
     .game-link:hover {
-        background-color: var(--button-hover);
+        background-color: var(--game-link-hover);
     }
 
-    .color-picker-wrapper {
+    .theme-switch-wrapper {
         position: fixed;
         top: 20px;
         right: 20px;
         z-index: 999;
     }
 
-    .color-picker {
-        height: 40px;
-        width: 40px;
-        border-radius: 50%;
-        cursor: pointer;
-        border: 2px solid #222222;
+    .theme-switch {
+        display: inline-block;
+        height: 34px;
+        width: 60px;
+        position: relative;
     }
 
-    .theme-switch-wrapper {
-        position: fixed;
-        top: 70px;
-        right: 20px;
-        z-index: 999;
+    .theme-switch input {
+        display: none;
+    }
+
+    .slider {
+        background-color: #ccc;
+        bottom: 0;
+        cursor: pointer;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transition: .4s;
+    }
+
+    .slider:before {
+        background-color: #fff;
+        bottom: 4px;        
+        content: "";
+        height: 26px;       
+        left: 4px;         
+        position: absolute;
+        transition: .4s;
+        width: 26px;       
+    }
+
+    input:checked + .slider {
+        background-color: #66b3ff;
+    }
+
+    input:checked + .slider:before {
+        transform: translateX(26px);
+    }
+
+    .slider.round {
+        border-radius: 34px;
+    }
+
+    .slider.round:before {
+        border-radius: 50%;
     }
 
     .center-content {
         text-align: center;
     }
 
-    /* Adjusting text color when background is light */
-    .light-background {
-        color: #000000;
-    }
-
-    .light-background .game-link {
-        border-color: #000000;
+    .color-picker {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 999;
     }
   </style>
 
@@ -99,9 +135,18 @@
 </head>
 
 <body>
+    <!-- Theme Switcher -->
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider round"></div>
+        </label>
+    </div>
+
     <!-- Color Picker -->
-    <div class="color-picker-wrapper">
-        <input type="color" id="colorPicker" class="color-picker" />
+    <div class="color-picker">
+        <label for="background-color">Background Color:</label>
+        <input type="color" id="background-color" name="background-color" value="#f4f4f4">
     </div>
 
     <h3>(Panic Teacher Button, press <kbd>Q</kbd> key)</h3>
@@ -114,7 +159,6 @@
             </div>
         </div>
     </strong>
-
     <div class="search-container">
         <input type="text" id="searchBar" onkeyup="searchgames()" placeholder="Search for some games I guess">
     </div>
@@ -123,8 +167,7 @@
         <div class="game-link-other">To Nintendoboi22</div>
     </a>
     <div class="game-grid">
-
-<a href="https://nintendoboi222.github.io/games/awesome-tanks-2" target="_blank" >
+       <a href="https://nintendoboi222.github.io/games/awesome-tanks-2" target="_blank" >
         <div class="game-link">Awesome Tanks 2</div>
     </a>
     <a href="https://nintendoboi222.github.io/games/basket-random" target="_blank" >
@@ -527,7 +570,6 @@
     </a>
 
 
-      
     </div>
 
     <br>
@@ -546,61 +588,126 @@
     </div>
 
     <script>
-        const colorPicker = document.getElementById('colorPicker');
-        const body = document.body;
-        const gameLinks = document.querySelectorAll('.game-link');
-        
-        colorPicker.addEventListener('input', function(event) {
-            const bgColor = event.target.value;
-            body.style.backgroundColor = bgColor;
+        const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
 
-            // Change text color and button based on background brightness
-            const rgb = hexToRgb(bgColor);
-            const brightness = (rgb.r * 299 + rgb.g * 587 + rgb.b * 114) / 1000;
-            
-            if (brightness > 186) { // Light color detected
-                body.classList.add('light-background');
-                gameLinks.forEach(link => {
-                    link.style.backgroundColor = adjustColor(bgColor, 20); // Slightly darker button
-                });
+        function switchTheme(e) {
+            if (e.target.checked) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
             } else {
-                body.classList.remove('light-background');
-                gameLinks.forEach(link => {
-                    link.style.backgroundColor = adjustColor(bgColor, -20); // Slightly lighter button
-                });
+                document.documentElement.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+            }    
+        }
+
+        toggleSwitch.addEventListener('change', switchTheme);
+
+        // Check for saved theme preference
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme) {
+            document.documentElement.setAttribute('data-theme', currentTheme);
+            if (currentTheme === 'dark') {
+                toggleSwitch.checked = true;
             }
+        }
+
+        // Color picker functionality
+        const colorPicker = document.getElementById('background-color');
+        colorPicker.addEventListener('input', function(event) {
+            const backgroundColor = event.target.value;
+            document.documentElement.style.setProperty('--background-color', backgroundColor);
+
+            // Adjust text color based on background
+            const brightness = calculateBrightness(backgroundColor);
+            if (brightness < 128) {
+                document.documentElement.style.setProperty('--text-color', '#ffffff');
+            } else {
+                document.documentElement.style.setProperty('--text-color', '#000000');
+            }
+
+            // Adjust button color
+            document.documentElement.style.setProperty('--game-link-bg', adjustColor(backgroundColor, -20));
+            document.documentElement.style.setProperty('--game-link-hover', adjustColor(backgroundColor, -10));
         });
 
-        // Function to adjust color brightness
-        function adjustColor(hex, amount) {
-            let color = hex;
-            if (color.startsWith('#')) {
-                color = color.substring(1);
-            }
-            let rgb = parseInt(color, 16); // Convert hex to RGB
-            let r = (rgb >> 16) + amount;
-            let g = (rgb >> 8 & 0x00FF) + amount;
-            let b = (rgb & 0x0000FF) + amount;
-            r = r < 0 ? 0 : r > 255 ? 255 : r;
-            g = g < 0 ? 0 : g > 255 ? 255 : g;
-            b = b < 0 ? 0 : b > 255 ? 255 : b;
-            return `rgb(${r}, ${g}, ${b})`;
+        // Function to calculate brightness of the color
+        function calculateBrightness(hex) {
+            const rgb = parseInt(hex.slice(1), 16); // Convert hex to RGB
+            const r = (rgb >> 16) & 0xff;
+            const g = (rgb >>  8) & 0xff;
+            const b = (rgb >>  0) & 0xff;
+            return (r*0.2126 + g*0.7152 + b*0.0722);
         }
 
-        // Function to convert Hex to RGB
-        function hexToRgb(hex) {
-            let r = 0, g = 0, b = 0;
-            if (hex.length === 4) {
-                r = "0x" + hex[1] + hex[1];
-                g = "0x" + hex[2] + hex[2];
-                b = "0x" + hex[3] + hex[3];
-            } else if (hex.length === 7) {
-                r = "0x" + hex[1] + hex[2];
-                g = "0x" + hex[3] + hex[4];
-                b = "0x" + hex[5] + hex[6];
-            }
-            return {r: +r, g: +g, b: +b};
+        // Function to adjust color (darken or lighten)
+        function adjustColor(hex, amount) {
+            let color = hex.slice(1);
+            let r = parseInt(color.slice(0, 2), 16);
+            let g = parseInt(color.slice(2, 4), 16);
+            let b = parseInt(color.slice(4, 6), 16);
+
+            r = Math.min(255, Math.max(0, r + amount));
+            g = Math.min(255, Math.max(0, g + amount));
+            b = Math.min(255, Math.max(0, b + amount));
+
+            return `#${(1 << 24) + (r << 16) + (g << 8) + b}`.toString(16).slice(1);
         }
     </script>
+
+    <script>
+        document.addEventListener('keydown', function(event) {
+            if (event.key.toLowerCase() === '`') {
+                const gameLinks = document.getElementsByClassName('game-link');
+                if (gameLinks.length > 0) {
+                    const randomIndex = Math.floor(Math.random() * gameLinks.length);
+                    const randomGame = gameLinks[randomIndex].parentElement.getAttribute('href');
+                    window.open(randomGame, '_blank');
+                }
+            }
+        });
+    </script>
+
+    <script>
+        let typedWord = '';
+        const targetWords = ['sigma','hawk','tuah', 'getout', 'skibidi', 'rizz', 'alpha', 'gyatt', 'ohio', 'mewing', 'goon', 'fanum','sus','amongus'];
+        const secret = ['ilovecats'];
+        const RAHHHH = ['idontlovecats','ilovedogs','catssuck','catssuck'];
+        const secretl = '/CAR/secret.html';
+        const RAHHHHl = 'https://medium.com/writing-in-the-media/cats-are-better-than-dogs-even-science-says-so-ca57e815f6d1';
+        const link = 'https://www.calm.com/blog/brainrot';
+        document.addEventListener('keydown', function(event) {
+            const key = event.key.toLowerCase();
+            typedWord += key;
+
+            console.log(`Typed letter: ${key}`);
+            console.log(`Current typedWord: ${typedWord}`);
+
+            if (targetWords.some(word => typedWord.includes(word))) {
+                window.open(link, '_blank');
+                console.log("Brainroted person detected!");
+                typedWord = '';
+            }
+            else if (secret.some(word => typedWord.includes(word))) {
+                window.open(secretl, '_blank');
+                console.log("Warping to car place");
+                typedWord = '';
+            }
+            else if (RAHHHH.some(word => typedWord.includes(word))) {
+                window.open(RAHHHHl, '_blank');
+                console.log("GET OUT");
+                typedWord = '';
+            }
+            const maxLength = Math.max(...targetWords.map(word => word.length), ...secret.map(word => word.length));
+            if (typedWord.length > maxLength) {
+                typedWord = typedWord.slice(-maxLength);
+            }
+        });
+    </script>
+
+<script src="/JS/jquery-3.7.1.min.js"></script>
+<script src="/JS/main.js"></script>
+<script src="/JS/Search.js"></script>
+<script src="/JS/timethingie.js"></script>
+<script src="/JS/titlestuff.js"></script>
 </body>
 </html>
