@@ -703,6 +703,58 @@
             }
         });
     </script>
+  <!-- Add this script to implement localStorage for ColorPicker -->
+<script>
+    // Color picker functionality
+    const colorPicker = document.getElementById('background-color');
+
+    // Load the saved color from localStorage and set it
+    document.addEventListener('DOMContentLoaded', () => {
+        const savedColor = localStorage.getItem('background-color');
+        if (savedColor) {
+            colorPicker.value = savedColor;
+            document.documentElement.style.setProperty('--background-color', savedColor);
+        }
+    });
+
+    // Save the selected color to localStorage when changed
+    colorPicker.addEventListener('input', function(event) {
+        const backgroundColor = event.target.value;
+        document.documentElement.style.setProperty('--background-color', backgroundColor);
+        localStorage.setItem('background-color', backgroundColor);
+
+        // Adjust text color based on background
+        const brightness = calculateBrightness(backgroundColor);
+        document.documentElement.style.setProperty('--text-color', brightness < 128 ? '#ffffff' : '#000000');
+        
+        // Adjust button color
+        document.documentElement.style.setProperty('--game-link-bg', adjustColor(backgroundColor, -20));
+        document.documentElement.style.setProperty('--game-link-hover', adjustColor(backgroundColor, -10));
+    });
+
+    // Function to calculate brightness of the color
+    function calculateBrightness(hex) {
+        const rgb = parseInt(hex.slice(1), 16); // Convert hex to RGB
+        const r = (rgb >> 16) & 0xff;
+        const g = (rgb >>  8) & 0xff;
+        const b = (rgb >>  0) & 0xff;
+        return (r*0.2126 + g*0.7152 + b*0.0722);
+    }
+
+    // Function to adjust color (darken or lighten)
+    function adjustColor(hex, amount) {
+        let color = hex.slice(1);
+        let r = parseInt(color.slice(0, 2), 16);
+        let g = parseInt(color.slice(2, 4), 16);
+        let b = parseInt(color.slice(4, 6), 16);
+
+        r = Math.min(255, Math.max(0, r + amount));
+        g = Math.min(255, Math.max(0, g + amount));
+        b = Math.min(255, Math.max(0, b + amount));
+
+        return `#${(1 << 24) + (r << 16) + (g << 8) + b}`.toString(16).slice(1);
+    }
+</script>
 
 <script src="/JS/jquery-3.7.1.min.js"></script>
 <script src="/JS/main.js"></script>
