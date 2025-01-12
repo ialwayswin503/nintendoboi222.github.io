@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="/css/titlestuff.css">
+    <link rel="stylesheet" href="/css/titlestuff.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nintendoboi222</title>
@@ -10,132 +10,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap" rel="stylesheet">
-
-  <!-- Theme Switcher Styles -->
-  <style>
-    :root {
-        --primary-color: #ffffff;
-        --secondary-color: #333333;
-        --background-color: #f4f4f4;
-        --text-color: #222222;
-        --link-color: #0066cc;
-        --game-link-bg: #4a4a4a;
-        --game-link-hover: #666666;
-    }
-
-    [data-theme="dark"] {
-        --primary-color: #674bc3;
-        --secondary-color: #ffffff;
-        --background-color: #222222;
-        --text-color: #8f0fd4;
-        --link-color: #66b3ff;
-        --game-link-bg: #2a2a2a;
-        --game-link-hover: #4a4a4a;
-    }
-
-    body {
-        background-color: var(--background-color);
-        color: var(--text-color);
-        font-family: 'Oxanium', sans-serif;
-    }
-
-    .game-link {
-        background-color: var(--game-link-bg);
-        color: var(--primary-color);
-    }
-
-    .game-link:hover {
-        background-color: var(--game-link-hover);
-    }
-
-    .theme-switch-wrapper {
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        z-index: 999;
-    }
-
-    .theme-switch {
-        display: inline-block;
-        height: 34px;
-        width: 60px;
-        position: relative;
-    }
-
-    .theme-switch input {
-        display: none;
-    }
-
-    .slider {
-        background-color: #ccc;
-        bottom: 0;
-        cursor: pointer;
-        left: 0;
-        position: absolute;
-        right: 0;
-        top: 0;
-        transition: .4s;
-    }
-
-    .slider:before {
-        background-color: #fff;
-        bottom: 4px;        
-        content: "";
-        height: 26px;       
-        left: 4px;         
-        position: absolute;
-        transition: .4s;
-        width: 26px;       
-    }
-
-    input:checked + .slider {
-        background-color: #66b3ff;
-    }
-
-    input:checked + .slider:before {
-        transform: translateX(26px);
-    }
-
-    .slider.round {
-        border-radius: 34px;
-    }
-
-    .slider.round:before {
-        border-radius: 50%;
-    }
-
-    .center-content {
-        text-align: center;
-    }
-
-    .color-picker {
-        position: fixed;
-        top: 20px;
-        left: 20px;
-        z-index: 999;
-    }
-    .game-link {
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-
-.pin-button {
-    cursor: pointer;
-    margin-right: 10px;
-    opacity: 0.5;
-    transition: opacity 0.2s;
-}
-
-.pin-button.pinned {
-    opacity: 1;
-    color: #ffd700;
-}
-
-.game-title {
-    flex: 1;
-}
-  </style>
 
   <meta charset="UTF-8">
   <meta name="description" content="I made this website at school bc I wanted to play games">
@@ -156,18 +30,17 @@
 </head>
 
 <body>
-    <!-- Theme Switcher -->
-    <div class="theme-switch-wrapper">
+    <!-- <div class="theme-switch-wrapper">
         <label class="theme-switch" for="dkjgdr">
             <input type="checkbox" id="asdsad" />
             <div class="slider round"></div>
         </label>
-    </div>
+    </div> -->
 
-    <!-- Color Picker -->
     <div class="color-picker">
-        <label for="background-color">Background Color:</label>
+        <label for="background-color"><strong>Background Color:</strong></label>
         <input type="color" id="background-color" name="background-color" value="#f4f4f4">
+        <button id="reset-color">Reset</button>
     </div>
 
     <h3>(Panic Teacher Button, press <kbd>Q</kbd> key)</h3>
@@ -188,415 +61,827 @@
         <div class="game-link-other">To Nintendoboi22</div>
     </a>
     <div class="game-grid">
-       <a href="https://nintendoboi222.github.io/games/awesome-tanks-2" target="_blank" >
-        <div class="game-link">Awesome Tanks 2</div>
+       <a href="https://nintendoboi222.github.io/games/awesome-tanks-2" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Awesome Tanks 2</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/basket-random" target="_blank" >
-        <div class="game-link">Basket Random</div>
+    <a href="https://nintendoboi222.github.io/games/basket-random" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Basket Random</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/basketball-stars" target="_blank" >
-        <div class="game-link">Basketball Stars</div>
+    <a href="https://nintendoboi222.github.io/games/basketball-stars" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Basketball Stars</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/bit-planes" target="_blank" >
-        <div class="game-link">Bit Planes</div>
+    <a href="https://nintendoboi222.github.io/games/bit-planes" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Bit Planes</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/bitlife" target="_blank" >
-        <div class="game-link">Bitlife</div>
+    <a href="https://nintendoboi222.github.io/games/bitlife" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Bitlife</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/bloxors" target="_blank" >
-        <div class="game-link">Bloxors</div>
+    <a href="https://nintendoboi222.github.io/games/bloxors" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Bloxors</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/BTD-1" target="_blank" >
-        <div class="game-link">Bloons TD</div>
+    <a href="https://nintendoboi222.github.io/games/BTD-1" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Bloons TD</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/BTD-2" target="_blank" >
-        <div class="game-link">Bloons TD 2</div>
+    <a href="https://nintendoboi222.github.io/games/BTD-2" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Bloons TD 2</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/BTD-3" target="_blank" >
-        <div class="game-link">Bloons TD 3</div>
+    <a href="https://nintendoboi222.github.io/games/BTD-3" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Bloons TD 3</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/BTD-4" target="_blank" >
-        <div class="game-link">Bloons TD 4</div>
+    <a href="https://nintendoboi222.github.io/games/BTD-4" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Bloons TD 4</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/BTD-5" target="_blank" >
-        <div class="game-link">Bloons TD 5</div>
+    <a href="https://nintendoboi222.github.io/games/BTD-5" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Bloons TD 5</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/boxing-random" target="_blank" >
-        <div class="game-link">Boxing Random</div>
+    <a href="https://nintendoboi222.github.io/games/boxing-random" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Boxing Random</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/Burrito-Bison" target="_blank" >
-        <div class="game-link">Burrito Bison</div>
+    <a href="https://nintendoboi222.github.io/games/Burrito-Bison" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Burrito Bison</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/challenge-the-runners" target="_blank" >
-        <div class="game-link">Challenge The Runners</div>
+    <a href="https://nintendoboi222.github.io/games/challenge-the-runners" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Challenge The Runners</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/chrome-dino" target="_blank" >
-        <div class="game-link">Chrome Dino</div>
+    <a href="https://nintendoboi222.github.io/games/chrome-dino" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Chrome Dino</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/clickerheros" target="_blank" >
-        <div class="game-link">Clicker Heros</div>
+    <a href="https://nintendoboi222.github.io/games/clickerheros" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Clicker Heros</span>
+        </div>
     </a>
     <a href="https://nintendoboi222.github.io/games/cluster-truck" target="_blank">
-        <div class="game-link">Cluster Truck</div>
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Cluster Truck</span>
+        </div>
     </a>
     <a href="https://nintendoboi222.github.io/games/cod-zombies" target="_blank">
-        <div class="game-link">COD Zombies</div>
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">COD Zombies</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/cookie-clicker" target="_blank" >
-        <div class="game-link">Cookie Clicker</div>
+    <a href="https://nintendoboi222.github.io/games/cookie-clicker" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Cookie Clicker</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/craft-mine" target="_blank" >
-        <div class="game-link">Craft Mine</div>
+    <a href="https://nintendoboi222.github.io/games/craft-mine" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Craft Mine</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/crossy-road" target="_blank" >
-        <div class="game-link">Crossy Road</div>
+    <a href="https://nintendoboi222.github.io/games/crossy-road" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Crossy Road</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/deal-or-no-deal" target="_blank" >
-        <div class="game-link">Deal or No Deal</div>
+    <a href="https://nintendoboi222.github.io/games/deal-or-no-deal" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Deal or No Deal</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/DNAtoRNAandAminoAcids" target="_blank" >
-        <div class="game-link">DNA Converter</div>
-    <a href="https://nintendoboi222.github.io/games/doom" target="_blank" >
-        <div class="game-link">Doom</div>
+    <a href="/games/DNAtoRNAandAminoAcids" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">DNA Converter</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/drift-hunters" target="_blank" >
-        <div class="game-link">Drift Hunters</div>
+    <a href="https://nintendoboi222.github.io/games/doom" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Doom</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/drift-boss" target="_blank" >
-        <div class="game-link">Drift Boss</div>
+    <a href="https://nintendoboi222.github.io/games/drift-hunters" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Drift Hunters</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/duck-life-1" target="_blank" >
-        <div class="game-link">Duck Life 1</div>
+    <a href="https://nintendoboi222.github.io/games/drift-boss" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Drift Boss</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/duck-life-2" target="_blank" >
-        <div class="game-link">Duck Life 2</div>
+    <a href="https://nintendoboi222.github.io/games/duck-life-1" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Duck Life 1</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/duck-life-3" target="_blank" >
-        <div class="game-link">Duck Life 3</div>
+    <a href="https://nintendoboi222.github.io/games/duck-life-2" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Duck Life 2</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/duck-life-4" target="_blank" >
-        <div class="game-link">Duck Life 4</div>
+    <a href="https://nintendoboi222.github.io/games/duck-life-3" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Duck Life 3</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/dune-2" target="_blank" >
-        <div class="game-link">Dune 2</div>
+    <a href="https://nintendoboi222.github.io/games/duck-life-4" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Duck Life 4</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/goofy-ahh-dune" target="_blank" >
-        <div class="game-link">"Dune"</div>
+    <a href="https://nintendoboi222.github.io/games/dune-2" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Dune 2</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/eggy-car" target="_blank" >
-        <div class="game-link">Eggy Car</div>
+    <a href="https://nintendoboi222.github.io/games/goofy-ahh-dune" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">"Dune"</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/evil-glitch" target="_blank" >
-        <div class="game-link">Evil Glitch</div>
+    <a href="https://nintendoboi222.github.io/games/eggy-car" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Eggy Car</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/FNAF-2" target="_blank" >
-        <div class="game-link">Five Nights at Freddys 2</div>
+    <a href="https://nintendoboi222.github.io/games/evil-glitch" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Evil Glitch</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/FNAF-3" target="_blank" >
-        <div class="game-link">Five Nights at Freddys 3</div>
+    <a href="https://nintendoboi222.github.io/games/FNAF-2" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Five Nights at Freddys 2</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/flappy-birb" target="_blank" >
-        <div class="game-link">Flappy Bird</div>
+    <a href="https://nintendoboi222.github.io/games/FNAF-3" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Five Nights at Freddys 3</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/Funny-Shooter-2" target="_blank" >
-        <div class="game-link">Funny Shooter 2</div>
+    <a href="https://nintendoboi222.github.io/games/flappy-birb" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Flappy Bird</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/geometrydash" target="_blank" >
-        <div class="game-link">Geometry Dash</div>
+    <a href="https://nintendoboi222.github.io/games/Funny-Shooter-2" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Funny Shooter 2</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/getaway-shootout" target="_blank" >
-        <div class="game-link">Getaway Shootout</div>
+    <a href="https://nintendoboi222.github.io/games/geometrydash" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Geometry Dash</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/gimme-the-aripod" target="_blank" >
-        <div class="game-link">Gimme the Airpod</div>
+    <a href="https://nintendoboi222.github.io/games/getaway-shootout" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Getaway Shootout</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/Google-snake" target="_blank" >
-        <div class="game-link">Google Snake</div>
+    <a href="https://nintendoboi222.github.io/games/gimme-the-aripod" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Gimme the Airpod</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/grind-craft" target="_blank" >
-        <div class="game-link">Grind Craft</div>
+    <a href="https://nintendoboi222.github.io/games/Google-snake" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Google Snake</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/helicopter" target="_blank" >
-        <div class="game-link">Helicopter</div>
+    <a href="https://nintendoboi222.github.io/games/grind-craft" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Grind Craft</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/hextris" target="_blank" >
-        <div class="game-link">Hextris</div>
+    <a href="https://nintendoboi222.github.io/games/helicopter" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Helicopter</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/idle-breakout" target="_blank" >
-        <div class="game-link">Idle Breakout</div>
+    <a href="https://nintendoboi222.github.io/games/hextris" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Hextris</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/idle-web-tycoon" target="_blank" >
-        <div class="game-link">Idle Web Tycoon</div>
+    <a href="https://nintendoboi222.github.io/games/idle-breakout" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Idle Breakout</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/impossiblequiz" target="_blank" >
-        <div class="game-link">Impossible Quiz</div>
+    <a href="https://nintendoboi222.github.io/games/idle-web-tycoon" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Idle Web Tycoon</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/impossiblequiz-2" target="_blank" >
-        <div class="game-link">Impossible Quiz 2</div>
+    <a href="https://nintendoboi222.github.io/games/impossiblequiz" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Impossible Quiz</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/jacksmith" target="_blank" >
-        <div class="game-link">JackSmith</div>
+    <a href="https://nintendoboi222.github.io/games/impossiblequiz-2" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Impossible Quiz 2</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/johnny-upgrade" target="_blank" >
-        <div class="game-link">Johnny Upgrade</div>
+    <a href="https://nintendoboi222.github.io/games/jacksmith" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">JackSmith</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/js-roulette" target="_blank" >
-        <div class="game-link">Javascript Roulette </div>
+    <a href="https://nintendoboi222.github.io/games/johnny-upgrade" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Johnny Upgrade</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/learn-to-fly" target="_blank" >
-        <div class="game-link">Learn To Fly</div>
+    <a href="https://nintendoboi222.github.io/games/js-roulette" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Javascript Roulette</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/learn-to-fly-2" target="_blank" >
-        <div class="game-link">Learn To Fly 2</div>
+    <a href="https://nintendoboi222.github.io/games/learn-to-fly" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Learn To Fly</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/learn-to-fly-3" target="_blank" >
-        <div class="game-link">Learn To Fly 3</div>
+    <a href="https://nintendoboi222.github.io/games/learn-to-fly-2" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Learn To Fly 2</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/learn-to-fly-idle" target="_blank" >
-        <div class="game-link">Learn To Fly Idle</div>
+    <a href="https://nintendoboi222.github.io/games/learn-to-fly-3" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Learn To Fly 3</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/madalin-stunt-cars-2" target="_blank" >
-        <div class="game-link">Madalin Stunt Cars 2</div>
+    <a href="https://nintendoboi222.github.io/games/learn-to-fly-idle" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Learn To Fly Idle</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/makesureitsclosed" target="_blank" >
-        <div class="game-link">Make Sure Its Closed</div>
+    <a href="https://nintendoboi222.github.io/games/madalin-stunt-cars-2" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Madalin Stunt Cars 2</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/missiles" target="_blank" >
-        <div class="game-link">Missiles</div>
+    <a href="https://nintendoboi222.github.io/games/makesureitsclosed" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Make Sure Its Closed</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/monkey-mart" target="_blank" >
-        <div class="game-link">Monkey Mart</div>
+    <a href="https://nintendoboi222.github.io/games/missiles" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Missiles</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/moto-x3m" target="_blank" >
-        <div class="game-link">Moto X3M</div>
+    <a href="https://nintendoboi222.github.io/games/monkey-mart" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Monkey Mart</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/murder" target="_blank" >
-        <div class="game-link">Murder</div>
+    <a href="https://nintendoboi222.github.io/games/moto-x3m" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Moto X3M</span>
+        </div>
+    </a>
+    <a href="https://nintendoboi222.github.io/games/murder" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Murder</span>
+        </div>
     </a>
     <a href="https://nintendoboi222.github.io/games/n-gon" target="_blank">
-        <div class="game-link">n-gon</div>  
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">n-gon</span>  
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/rusty-submarine" target="_blank" >
-        <div class="game-link">My Rusty Submarine</div>
+    <a href="https://nintendoboi222.github.io/games/rusty-submarine" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">My Rusty Submarine</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/nintendo-64/dist/index.html" target="_blank" >
-        <div class="game-link">Nintendo 64 Emulator</div>
+    <a href="https://nintendoboi222.github.io/games/nintendo-64/dist/index.html" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Nintendo 64 Emulator</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/oh-flip" target="_blank" >
-        <div class="game-link">Oh, Flip</div>
+    <a href="https://nintendoboi222.github.io/games/oh-flip" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Oh, Flip</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/other-tag" target="_blank" >
-        <div class="game-link">Other Tag</div>
+    <a href="https://nintendoboi222.github.io/games/other-tag" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Other Tag</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/OVO" target="_blank" >
-        <div class="game-link">OVO</div>
+    <a href="https://nintendoboi222.github.io/games/OVO" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">OVO</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/pandemic-2" target="_blank" >
-        <div class="game-link">Pandemic 2</div>
+    <a href="https://nintendoboi222.github.io/games/pandemic-2" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Pandemic 2</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/papa-louie" target="_blank" >
-        <div class="game-link">Papa Louie</div>
+    <a href="https://nintendoboi222.github.io/games/papa-louie" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Papa Louie</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/papas-bakeria" target="_blank" >
-        <div class="game-link">Papa's Bakeria</div>
+    <a href="https://nintendoboi222.github.io/games/papas-bakeria" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Papa's Bakeria</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/papas-burgeria" target="_blank" >
-        <div class="game-link">Papa's Burgeria</div>
+    <a href="https://nintendoboi222.github.io/games/papas-burgeria" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Papa's Burgeria</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/papas-cheeseria" target="_blank" >
-        <div class="game-link">Papa's Cheeseria</div>
+    <a href="https://nintendoboi222.github.io/games/papas-cheeseria" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Papa's Cheeseria</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/papas-cupcakeria" target="_blank" >
-        <div class="game-link">Papa's Cupcakeria</div>
+    <a href="https://nintendoboi222.github.io/games/papas-cupcakeria" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Papa's Cupcakeria</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/papas-donuteria" target="_blank" >
-        <div class="game-link">Papa's Donuteria</div>
+    <a href="https://nintendoboi222.github.io/games/papas-donuteria" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Papa's Donuteria</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/papas-freezeria" target="_blank" >
-        <div class="game-link">Papa's Freezeria</div>
+    <a href="https://nintendoboi222.github.io/games/papas-freezeria" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Papa's Freezeria</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/papas-hotdoggeria" target="_blank" >
-        <div class="game-link">Papa's Hotdoggeria</div>
+    <a href="https://nintendoboi222.github.io/games/papas-hotdoggeria" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Papa's Hotdoggeria</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/papas-pancakeria" target="_blank" >
-        <div class="game-link">Papa's Pancakeria</div>
+    <a href="https://nintendoboi222.github.io/games/papas-pancakeria" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Papa's Pancakeria</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/papas-pizzeria" target="_blank" >
-        <div class="game-link">Papa's Pizzeria</div>
+    <a href="https://nintendoboi222.github.io/games/papas-pizzeria" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Papa's Pizzeria</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/papas-scooperia" target="_blank" >
-        <div class="game-link">Papa's Scooperia</div>
+    <a href="https://nintendoboi222.github.io/games/papas-scooperia" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Papa's Scooperia</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/papas-sushiria" target="_blank" >
-        <div class="game-link">Papa's Sushiria</div>
+    <a href="https://nintendoboi222.github.io/games/papas-sushiria" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Papa's Sushiria</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/papas-taco-mia" target="_blank" >
-        <div class="game-link">Papa's Taco Mia</div>
+    <a href="https://nintendoboi222.github.io/games/papas-taco-mia" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Papa's Taco Mia</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/papas-wingeria" target="_blank" >
-        <div class="game-link">Papa's Wingeria</div>
+    <a href="https://nintendoboi222.github.io/games/papas-wingeria" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Papa's Wingeria</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/papas-pastaria" target="_blank" >
-        <div class="game-link">Papa's Pastaria</div>
+    <a href="https://nintendoboi222.github.io/games/papas-pastaria" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Papa's Pastaria</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/papery-planes" target="_blank" >
-        <div class="game-link">Papery Planes</div>
+    <a href="https://nintendoboi222.github.io/games/papery-planes" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Papery Planes</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/PC-breakdown" target="_blank" >
-        <div class="game-link">PC breakdown</div>
+    <a href="https://nintendoboi222.github.io/games/PC-breakdown" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">PC breakdown</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/pcraft" target="_blank" >
-        <div class="game-link">P.Craft</div>
+    <a href="https://nintendoboi222.github.io/games/pcraft" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">P.Craft</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/poly-track" target="_blank" >
-        <div class="game-link">Poly Track</div>
+    <a href="https://nintendoboi222.github.io/games/poly-track" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Poly Track</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/not-a-proxy-trust-me-here" target="_blank" >
-        <div class="game-link">Not a Proxy 😉</div>
+    <a href="https://nintendoboi222.github.io/games/not-a-proxy-trust-me-here" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Not a Proxy 😉</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/push-your-luck" target="_blank" >
-        <div class="game-link">Push Your Luck</div>
+    <a href="https://nintendoboi222.github.io/games/push-your-luck" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Push Your Luck</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/ragdoll-archers" target="_blank" >
-        <div class="game-link">Ragdoll Archers</div>
+    <a href="https://nintendoboi222.github.io/games/ragdoll-archers" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Ragdoll Archers</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/ragdoll-hit" target="_blank" >
-        <div class="game-link">Ragdoll Hit</div>
+    <a href="https://nintendoboi222.github.io/games/ragdoll-hit" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Ragdoll Hit</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/random-r6-op" target="_blank" >
-        <div class="game-link">Random R6 Op</div>
+    <a href="https://nintendoboi222.github.io/games/random-r6-op" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Random R6 Op</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/REAL-FS" target="_blank" >
-        <div class="game-link">Real Flight Simulator</div>
+    <a href="https://nintendoboi222.github.io/games/REAL-FS" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Real Flight Simulator</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/retro-bowl" target="_blank" >
-        <div class="game-link">Retro Bowl</div>
+    <a href="https://nintendoboi222.github.io/games/retro-bowl" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Retro Bowl</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/retro-bowl-collage" target="_blank" >
-        <div class="game-link">Retro Bowl Collage</div>
+    <a href="https://nintendoboi222.github.io/games/retro-bowl-collage" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Retro Bowl Collage</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/Riddle-school-1" target="_blank" >
-        <div class="game-link">Riddle School 1</div>
+    <a href="https://nintendoboi222.github.io/games/Riddle-school-1" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Riddle School 1</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/riddle-school-2" target="_blank" >
-        <div class="game-link">Riddle School 2</div>
+    <a href="https://nintendoboi222.github.io/games/riddle-school-2" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Riddle School 2</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/Riddle-School-3" target="_blank" >
-        <div class="game-link">Riddle School 3</div>
+    <a href="https://nintendoboi222.github.io/games/Riddle-School-3" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Riddle School 3</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/Riddle-School-4" target="_blank" >
-        <div class="game-link">Riddle School 4</div>
+    <a href="https://nintendoboi222.github.io/games/Riddle-School-4" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Riddle School 4</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/Riddle-School-5" target="_blank" >
-        <div class="game-link">Riddle School 5</div>
+    <a href="https://nintendoboi222.github.io/games/Riddle-School-5" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Riddle School 5</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/rooftopsnipers" target="_blank" >
-        <div class="game-link">Rooftop Snipers</div>
+    <a href="https://nintendoboi222.github.io/games/rooftopsnipers" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Rooftop Snipers</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/run-2" target="_blank" >
-        <div class="game-link">Run 2</div>
+    <a href="https://nintendoboi222.github.io/games/run-2" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Run 2</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/slope" target="_blank" >
-        <div class="game-link">Slope</div>
+    <a href="https://nintendoboi222.github.io/games/slope" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Slope</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/snow-rider" target="_blank" >
-        <div class="game-link">Snow Rider</div>
+    <a href="https://nintendoboi222.github.io/games/snow-rider" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Snow Rider</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/snake-io" target="_blank" >
-        <div class="game-link">Snake.io</div>
+    <a href="https://nintendoboi222.github.io/games/snake-io" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Snake.io</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/soccer-random" target="_blank" >
-        <div class="game-link">Soccer Random</div>
+    <a href="https://nintendoboi222.github.io/games/soccer-random" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Soccer Random</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/sonic-cd" target="_blank" >
-        <div class="game-link">Sonic CD</div>
+    <a href="https://nintendoboi222.github.io/games/sonic-cd" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Sonic CD</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/sort-the-court" target="_blank" >
-        <div class="game-link">Sort the Court</div>
+    <a href="https://nintendoboi222.github.io/games/sort-the-court" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Sort the Court</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/space-company" target="_blank" >
-        <div class="game-link">Space Company</div>
+    <a href="https://nintendoboi222.github.io/games/space-company" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Space Company</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/SD" target="_blank" >
-        <div class="game-link">Stickman Destruction</div>
+    <a href="https://nintendoboi222.github.io/games/SD" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Stickman Destruction</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/stickman-hook" target="_blank" >
-        <div class="game-link">Stickman Hook</div>
+    <a href="https://nintendoboi222.github.io/games/stickman-hook" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Stickman Hook</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/SRP" target="_blank" >
-        <div class="game-link">Stickman Ragdoll Playground</div>
+    <a href="https://nintendoboi222.github.io/games/SRP" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Stickman Ragdoll Playground</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/superhot" target="_blank" >
-        <div class="game-link">Superhot</div>
+    <a href="https://nintendoboi222.github.io/games/superhot" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Superhot</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/SM63" target="_blank" >
-        <div class="game-link">Super Mario 63</div>
+    <a href="https://nintendoboi222.github.io/games/SM63" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Super Mario 63</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/SM64" target="_blank" >
-        <div class="game-link">Super Mario 64</div>
+    <a href="https://nintendoboi222.github.io/games/SM64" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Super Mario 64</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/subway-surfers-beijing" target="_blank" >
-        <div class="game-link">Subway Surfers Beijing</div>
+    <a href="https://nintendoboi222.github.io/games/subway-surfers-beijing" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Subway Surfers Beijing</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/subwaysurfers-sf" target="_blank" >
-        <div class="game-link">Subway Surfers San Francisco</div>
+    <a href="https://nintendoboi222.github.io/games/subwaysurfers-sf" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Subway Surfers San Francisco</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/tag" target="_blank" >
-        <div class="game-link">TAG</div>
+    <a href="https://nintendoboi222.github.io/games/tag" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">TAG</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/tanuki-sunset-halloween" target="_blank" >
-        <div class="game-link">Tanuki Sunset</div>
+    <a href="https://nintendoboi222.github.io/games/tanuki-sunset-halloween" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Tanuki Sunset</span>
+        </div>
     </a>
     <a href="https://nintendoboi222.github.io/games/Terminus.JS" target="_blank">
-        <div class="game-link">Terminus.JS</div>
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Terminus.JS</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/territorial-io" target="_blank" >
-        <div class="game-link">Territorial.io</div>
+    <a href="https://nintendoboi222.github.io/games/territorial-io" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Territorial.io</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/tetris" target="_blank" >
-        <div class="game-link">Tetris</div>
+    <a href="https://nintendoboi222.github.io/games/tetris" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Tetris</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/there-is-no-game" target="_blank" >
-        <div class="game-link">There Is No Game</div>
+    <a href="https://nintendoboi222.github.io/games/there-is-no-game" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">There Is No Game</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/time-shooter-2" target="_blank" >
-        <div class="game-link">Time Shooter 2</div>
+    <a href="https://nintendoboi222.github.io/games/time-shooter-2" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Time Shooter 2</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/time-shooter-3" target="_blank" >
-        <div class="game-link">Time Shooter 3</div>
+    <a href="https://nintendoboi222.github.io/games/time-shooter-3" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Time Shooter 3</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/tiny-fishing" target="_blank" >
-        <div class="game-link">Tiny Fishing</div>
+    <a href="https://nintendoboi222.github.io/games/tiny-fishing" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Tiny Fishing</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/tomb-of-the-mask" target="_blank" >
-        <div class="game-link">Tomb of The Mask</div>
+    <a href="https://nintendoboi222.github.io/games/tomb-of-the-mask" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Tomb of The Mask</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/tunnel-rush-1" target="_blank" >
-        <div class="game-link">Tunnel Rush 1</div>
+    <a href="https://nintendoboi222.github.io/games/tunnel-rush-1" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Tunnel Rush 1</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/tunnel-rush-2" target="_blank" >
-        <div class="game-link">Tunnel Rush 2</div>
+    <a href="https://nintendoboi222.github.io/games/tunnel-rush-2" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Tunnel Rush 2</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/unicycle-hero" target="_blank" >
-        <div class="game-link">Unicycle Hero</div>
+    <a href="https://nintendoboi222.github.io/games/unicycle-hero" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Unicycle Hero</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/volley-random" target="_blank" >
-        <div class="game-link">Volly Random</div>
+    <a href="https://nintendoboi222.github.io/games/volley-random" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Volly Random</span>
+        </div>
     </a>
-     <a href="https://nintendoboi222.github.io/games/wheely-1" target="_blank" >
-        <div class="game-link">Wheely 1</div>
+     <a href="https://nintendoboi222.github.io/games/wheely-1" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">Wheely 1</span>
+        </div>
     </a>
-    <a href="https://nintendoboi222.github.io/games/10-minutes-till-dawn" target="_blank" >
-        <div class="game-link">10 Minutes Until Dawn</div>
+    <a href="https://nintendoboi222.github.io/games/10-minutes-till-dawn" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">10 Minutes Until Dawn</span>
+        </div>
     </a>
-        <a href="https://nintendoboi222.github.io/games/2048" target="_blank" >
-        <div class="game-link">2048</div>
+        <a href="https://nintendoboi222.github.io/games/2048" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">2048</span>
+        </div>
     </a>
         <a href="https://nintendoboi222.github.io/games/1v1-lol" target=_blank" >    
-        <div class="game-link">1v1 LOL</div>
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">1v1 LOL</span>
+        </div>
     </a>
-        <a href="https://nintendoboi222.github.io/games/2MinuteFootball" target="_blank" >
-        <div class="game-link">2 Minute Football</div>
+        <a href="https://nintendoboi222.github.io/games/2MinuteFootball" target="_blank">
+        <div class="game-link">
+            <span class="pin-button">⭐</span>
+            <span class="game-title">2 Minute Football</span>
+        </div>
     </a>
 
 
@@ -617,7 +902,7 @@
         </footer>
     </div>
 
-    <script>
+    <!-- <script>
         const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
 
         function switchTheme(e) {
@@ -632,7 +917,6 @@
 
         toggleSwitch.addEventListener('change', switchTheme);
 
-        // Check for saved theme preference
         const currentTheme = localStorage.getItem('theme');
         if (currentTheme) {
             document.documentElement.setAttribute('data-theme', currentTheme);
@@ -641,13 +925,10 @@
             }
         }
 
-        // Color picker functionality
-        const colorPicker = document.getElementById('background-color');
         colorPicker.addEventListener('input', function(event) {
             const backgroundColor = event.target.value;
             document.documentElement.style.setProperty('--background-color', backgroundColor);
 
-            // Adjust text color based on background
             const brightness = calculateBrightness(backgroundColor);
             if (brightness < 128) {
                 document.documentElement.style.setProperty('--text-color', '#ffffff');
@@ -655,136 +936,10 @@
                 document.documentElement.style.setProperty('--text-color', '#000000');
             }
 
-            // Adjust button color
             document.documentElement.style.setProperty('--game-link-bg', adjustColor(backgroundColor, -20));
             document.documentElement.style.setProperty('--game-link-hover', adjustColor(backgroundColor, -10));
         });
-
-        // Function to calculate brightness of the color
-        function calculateBrightness(hex) {
-            const rgb = parseInt(hex.slice(1), 16); // Convert hex to RGB
-            const r = (rgb >> 16) & 0xff;
-            const g = (rgb >>  8) & 0xff;
-            const b = (rgb >>  0) & 0xff;
-            return (r*0.2126 + g*0.7152 + b*0.0722);
-        }
-
-        // Function to adjust color (darken or lighten)
-        function adjustColor(hex, amount) {
-            let color = hex.slice(1);
-            let r = parseInt(color.slice(0, 2), 16);
-            let g = parseInt(color.slice(2, 4), 16);
-            let b = parseInt(color.slice(4, 6), 16);
-
-            r = Math.min(255, Math.max(0, r + amount));
-            g = Math.min(255, Math.max(0, g + amount));
-            b = Math.min(255, Math.max(0, b + amount));
-
-            return `#${(1 << 24) + (r << 16) + (g << 8) + b}`.toString(16).slice(1);
-        }
-    </script>
-
-    <script>
-        document.addEventListener('keydown', function(event) {
-            if (event.key.toLowerCase() === '`') {
-                const gameLinks = document.getElementsByClassName('game-link');
-                if (gameLinks.length > 0) {
-                    const randomIndex = Math.floor(Math.random() * gameLinks.length);
-                    const randomGame = gameLinks[randomIndex].parentElement.getAttribute('href');
-                    window.open(randomGame, '_blank');
-                }
-            }
-        });
-    </script>
-
-    <script>
-        let typedWord = '';
-        const targetWords = ['sigma','hawk','tuah', 'getout', 'skibidi', 'rizz', 'alpha', 'gyatt', 'ohio', 'mewing', 'goon', 'fanum','sus','amongus'];
-        const secret = ['ilovecats'];
-        const RAHHHH = ['idontlovecats','ilovedogs','catsuck','catssuck'];
-        const secretl = '/CAR/secret.html';
-        const RAHHHHl = 'https://medium.com/writing-in-the-media/cats-are-better-than-dogs-even-science-says-so-ca57e815f6d1';
-        const link = 'https://www.calm.com/blog/brainrot';
-        document.addEventListener('keydown', function(event) {
-            const key = event.key.toLowerCase();
-            typedWord += key;
-
-            console.log(`Typed letter: ${key}`);
-            console.log(`Current typedWord: ${typedWord}`);
-
-            if (targetWords.some(word => typedWord.includes(word))) {
-                window.open(link, '_blank');
-                console.log("Brainroted person detected!");
-                typedWord = '';
-            }
-            else if (secret.some(word => typedWord.includes(word))) {
-                window.open(secretl, '_blank');
-                console.log("Warping to car place");
-                typedWord = '';
-            }
-            else if (RAHHHH.some(word => typedWord.includes(word))) {
-                window.open(RAHHHHl, '_blank');
-                console.log("GET OUT");
-                typedWord = '';
-            }
-            const maxLength = Math.max(...targetWords.map(word => word.length), ...secret.map(word => word.length));
-            if (typedWord.length > maxLength) {
-                typedWord = typedWord.slice(-maxLength);
-            }
-        });
-    </script>
-  <!-- Add this script to implement localStorage for ColorPicker -->
-<script>
-    // Color picker functionality
-    const colorPicker = document.getElementById('background-color');
-
-    // Load the saved color from localStorage and set it
-    document.addEventListener('DOMContentLoaded', () => {
-        const savedColor = localStorage.getItem('background-color');
-        if (savedColor) {
-            colorPicker.value = savedColor;
-            document.documentElement.style.setProperty('--background-color', savedColor);
-        }
-    });
-
-    // Save the selected color to localStorage when changed
-    colorPicker.addEventListener('input', function(event) {
-        const backgroundColor = event.target.value;
-        document.documentElement.style.setProperty('--background-color', backgroundColor);
-        localStorage.setItem('background-color', backgroundColor);
-
-        // Adjust text color based on background
-        const brightness = calculateBrightness(backgroundColor);
-        document.documentElement.style.setProperty('--text-color', brightness < 128 ? '#ffffff' : '#000000');
-        
-        // Adjust button color
-        document.documentElement.style.setProperty('--game-link-bg', adjustColor(backgroundColor, -20));
-        document.documentElement.style.setProperty('--game-link-hover', adjustColor(backgroundColor, -10));
-    });
-
-    // Function to calculate brightness of the color
-    function calculateBrightness(hex) {
-        const rgb = parseInt(hex.slice(1), 16); // Convert hex to RGB
-        const r = (rgb >> 16) & 0xff;
-        const g = (rgb >>  8) & 0xff;
-        const b = (rgb >>  0) & 0xff;
-        return (r*0.2126 + g*0.7152 + b*0.0722);
-    }
-
-    // Function to adjust color (darken or lighten)
-    function adjustColor(hex, amount) {
-        let color = hex.slice(1);
-        let r = parseInt(color.slice(0, 2), 16);
-        let g = parseInt(color.slice(2, 4), 16);
-        let b = parseInt(color.slice(4, 6), 16);
-
-        r = Math.min(255, Math.max(0, r + amount));
-        g = Math.min(255, Math.max(0, g + amount));
-        b = Math.min(255, Math.max(0, b + amount));
-
-        return `#${(1 << 24) + (r << 16) + (g << 8) + b}`.toString(16).slice(1);
-    }
-</script>
+    </script> -->
 
 <script src="/JS/jquery-3.7.1.min.js"></script>
 <script src="/JS/main.js"></script>

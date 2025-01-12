@@ -65,4 +65,4 @@ function changeSiteName() {
   }
 }
 
-intervalId = setInterval(changeSiteName, 1000); // Assign intervalId
+intervalId = setInterval(changeSiteName, 1000);
