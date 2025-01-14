@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const gameTitle = link.textContent;
         const pinButton = document.createElement('span');
         pinButton.className = 'pin-button';
-        pinButton.textContent = pinnedGames.includes(gameTitle) ? '🌟' : '⭐';
+        pinButton.textContent = pinnedGames.includes(gameTitle) ? '💛' : '💜';
         
         if (pinnedGames.includes(gameTitle)) {
             pinButton.classList.add('pinned');
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
             e.stopPropagation();
             
             pinButton.classList.toggle('pinned');
-            pinButton.textContent = pinButton.classList.contains('pinned') ? '🌟' : '⭐';
+            pinButton.textContent = pinButton.classList.contains('pinned') ? '💛' : '💜';
             
             const updatedPins = pinButton.classList.contains('pinned') 
                 ? [...pinnedGames, gameTitle]
