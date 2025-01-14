@@ -1,9 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
     const pinnedGames = JSON.parse(localStorage.getItem('pinnedGames') || '[]');
-    
+    const originalOrder = [];
+
     const gameLinks = document.querySelectorAll('.game-link');
-    gameLinks.forEach(link => {
+    gameLinks.forEach((link, index) => {
         const gameTitle = link.textContent;
+        originalOrder.push({ gameTitle, index });
+
         const pinButton = document.createElement('span');
         pinButton.className = 'pin-button';
         pinButton.textContent = pinnedGames.includes(gameTitle) ? '💛' : '💜';
@@ -48,7 +51,14 @@ document.addEventListener('DOMContentLoaded', () => {
             
             if (aPinned && !bPinned) return -1;
             if (!aPinned && bPinned) return 1;
-            return 0;
+
+            const aTitle = a.querySelector('.game-title').textContent;
+            const bTitle = b.querySelector('.game-title').textContent;
+
+            const aOriginalIndex = originalOrder.findIndex(item => item.gameTitle === aTitle);
+            const bOriginalIndex = originalOrder.findIndex(item => item.gameTitle === bTitle);
+
+            return aOriginalIndex - bOriginalIndex;
         });
         
         games.forEach(game => gameGrid.appendChild(game));
