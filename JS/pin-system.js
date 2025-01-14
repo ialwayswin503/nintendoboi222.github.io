@@ -62,13 +62,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         
         games.forEach(game => gameGrid.appendChild(game));
-        
-        // Add duplicates of pinned games at the start
+
+        // Move pinned games to the start without removing the original
         pinnedGames.forEach(gameTitle => {
             const originalGame = games.find(game => game.querySelector('.game-title').textContent === gameTitle);
             if (originalGame) {
-                const duplicateGame = originalGame.cloneNode(true);
-                gameGrid.insertBefore(duplicateGame, gameGrid.firstChild);
+                const clone = originalGame.cloneNode(true);
+                gameGrid.insertBefore(clone, gameGrid.firstChild);
             }
         });
     }
