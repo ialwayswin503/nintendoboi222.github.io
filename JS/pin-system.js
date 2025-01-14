@@ -62,6 +62,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         
         games.forEach(game => gameGrid.appendChild(game));
+        
+        // Add duplicates of pinned games at the start
+        pinnedGames.forEach(gameTitle => {
+            const originalGame = games.find(game => game.querySelector('.game-title').textContent === gameTitle);
+            if (originalGame) {
+                const duplicateGame = originalGame.cloneNode(true);
+                gameGrid.insertBefore(duplicateGame, gameGrid.firstChild);
+            }
+        });
     }
     
     reorderGames();
