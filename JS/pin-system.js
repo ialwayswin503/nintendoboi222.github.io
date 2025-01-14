@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const gameLinks = document.querySelectorAll('.game-link');
     gameLinks.forEach((link, index) => {
-        const gameTitle = link.textContent;
+        const gameTitle = link.querySelector('.game-title').textContent;
         originalOrder.push({ gameTitle, index });
 
         const pinButton = document.createElement('span');
@@ -55,8 +55,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const aTitle = a.querySelector('.game-title').textContent;
             const bTitle = b.querySelector('.game-title').textContent;
 
-            const aOriginalIndex = originalOrder.findIndex(item => item.gameTitle === aTitle);
-            const bOriginalIndex = originalOrder.findIndex(item => item.gameTitle === bTitle);
+            const aOriginalIndex = originalOrder.find(item => item.gameTitle === aTitle).index;
+            const bOriginalIndex = originalOrder.find(item => item.gameTitle === bTitle).index;
 
             return aOriginalIndex - bOriginalIndex;
         });
