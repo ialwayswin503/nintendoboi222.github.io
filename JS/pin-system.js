@@ -22,11 +22,19 @@ document.addEventListener('DOMContentLoaded', () => {
             pinButton.classList.toggle('pinned');
             pinButton.textContent = pinButton.classList.contains('pinned') ? '💛' : '💜';
 
-            const updatedPins = pinButton.classList.contains('pinned') 
-                ? [...new Set([...pinnedGames, gameTitle])]
-                : pinnedGames.filter(game => game !== gameTitle);
+            let updatedPins;
+            if (pinButton.classList.contains('pinned')) {
+                updatedPins = [...new Set([...pinnedGames, gameTitle])];
+            } else {
+                updatedPins = pinnedGames.filter(game => game !== gameTitle);
+            }
 
-            localStorage.setItem('pinnedGames', JSON.stringify(updatedPins));
+            try {
+                localStorage.setItem('pinnedGames', JSON.stringify(updatedPins));
+            } catch (error) {
+                console.error('Failed to save pinned games:', error);
+                alert('Unable to save changes. Your browser might be in private mode or not support localStorage.');
+            }
 
             reorderGames();
         });
