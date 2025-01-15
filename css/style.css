@@ -17,7 +17,8 @@ body {
 }
 .inline-elements {
     display: flex;
-    align-items: right;
+    justify-content: space-between;
+    align-items: center;
 }
 h1 {
     text-align: center;
