@@ -15,7 +15,10 @@ body {
     margin: 0;
     padding: 20px;
 }
-
+.inline-elements {
+    display: flex;
+    align-items: center;
+}
 h1 {
     text-align: center;
     color: #379cf4;
