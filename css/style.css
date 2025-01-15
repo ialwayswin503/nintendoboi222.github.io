@@ -171,7 +171,6 @@ body.dark-mode {
     left: -250px;
     transition: 0.3s;
     padding: 20px;
-    box-sizing: border-box;
 }
 
 #sidebar h2 {
@@ -196,4 +195,8 @@ body.dark-mode {
 
 #closeBtn {
     margin-top: 20px;
+}
+
+.clicks {
+    text-align: right;
 }
