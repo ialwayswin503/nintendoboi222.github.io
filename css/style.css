@@ -15,7 +15,7 @@ body {
     margin: 0;
     padding: 20px;
 }
-.inline-elements {
+.thoeswhoknow {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -199,8 +199,4 @@ body.dark-mode {
 
 #closeBtn {
     margin-top: 20px;
-}
-
-.clicks {
-    text-align: right;
 }
