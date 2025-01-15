@@ -13,13 +13,15 @@ function resetTime() {
 }
 
 function formatTime(seconds) {
+  var days = Math.floor(seconds / 86400);
   var hours = Math.floor(seconds / 3600);
   var minutes = Math.floor((seconds % 3600) / 60);
   seconds = seconds % 60;
-
+  
+  var daysDisplay = days > 0 ? days + (days === 1 ? ' day ' : ' days ') : '';
   var hoursDisplay = hours > 0 ? hours + (hours === 1 ? ' hour ' : ' hours ') : '';
   var minutesDisplay = minutes > 0 ? minutes + (minutes === 1 ? ' minute ' : ' minutes ') : '';
   var secondsDisplay = seconds + (seconds === 1 ? ' second' : ' seconds');
 
-  return hoursDisplay + minutesDisplay + secondsDisplay;
+  return daysDisplay + hoursDisplay + minutesDisplay + secondsDisplay;
 }
