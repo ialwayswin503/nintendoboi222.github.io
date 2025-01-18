@@ -1,20 +1,57 @@
+body {
+    font-family: 'Oxanium', sans-serif;
+    background: linear-gradient(135deg, #4f4f9f, #222222);
+    color: white;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    padding: 50px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+h1 {
+    font-size: 3rem;
+    color: #f7ff3c;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+h2 {
+    color: #ffd700;
+    font-size: 2rem;
+}
+
+.search-bar {
+    margin-top: 20px;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    width: 60%;
+    max-width: 500px;
+    font-size: 1rem;
+    color: #333;
+}
+
 .game-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Responsive columns */
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Responsive grid layout */
     gap: 20px; /* Space between items */
+    justify-content: center; /* Center the grid items */
     padding: 30px;
-    max-width: 1200px; /* Limit the grid width for better alignment */
-    margin: 0 auto; /* Center the grid container */
-    justify-content: center; /* Center items within the container */
+    max-width: 100%;
+    margin: 0 auto;
 }
 
 .game-link {
     background-color: #333;
     border-radius: 12px;
     padding: 20px;
-    height: 160px;
+    height: 160px; /* Adjust height as needed */
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Ensure content stacks vertically */
     justify-content: center;
     align-items: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
@@ -44,13 +81,37 @@
     margin-bottom: 10px;
 }
 
+a {
+    text-decoration: none;
+}
+
+footer {
+    background-color: #111;
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+
+footer a {
+    color: #ffd700;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1rem;
+}
+
+footer a:hover {
+    color: #f7ff3c;
+}
+
 @media (max-width: 600px) {
     .game-grid {
-        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Smaller columns on mobile */
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Smaller grid items for narrow screens */
     }
 
     .game-link {
-        height: 120px; /* Reduce height for smaller screens */
+        height: 120px; /* Reduce height for small screens */
     }
 
     .game-title {
