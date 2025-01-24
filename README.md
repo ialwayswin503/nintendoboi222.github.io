@@ -21,6 +21,9 @@
         -[I(*and future partners*) do not take credit for the games in this website, they are not created or made by us]
 - *pls dont sue me 🥺*
 
+- - ***DISCLAIMER***
+- -[By using this site, you acknowledge and agree that I (and any future partners) shall not be held responsible for any consequences or legal issues that may arise from your use of this site. You are solely responsible for your actions while using this site.]
+
 > # Links
 1. **[Main](https://nintendoboi22.github.io)**
 2. **[Main 2](https://nintendoboi222.github.io)**
